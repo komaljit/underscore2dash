@@ -3540,7 +3540,7 @@ spec:
     <pipeline name="qa-aq" isLocked="false">
       <timer>00 44 14 ? * MON-SUN</timer>
       <materials>
-        <git url="git@github-proxy.master.openx.org:openx/oxtest-aq.git" shallowClone="true" dest="oxbot/oxtest_aq" autoUpdate="false">
+        <git url="git@github-proxy.master.openx.org:openx/oxtest-aq.git" shallowClone="true" dest="oxbot/oxtest-aq" autoUpdate="false">
           <filter>
             <ignore pattern="**/*" />
           </filter>
@@ -3562,7 +3562,7 @@ spec:
             <tasks>
               <exec command="/bin/bash" workingdir="oxbot">
                 <arg>-xc</arg>
-                <arg>oxbot -i Account -v account_type:network oxtest_aq/components/OX3API/tests</arg>
+                <arg>oxbot -i Account -v account_type:network oxtest-aq/components/OX3API/tests</arg>
                 <runif status="passed" />
               </exec>
             </tasks>
@@ -3578,7 +3578,7 @@ spec:
             <tasks>
               <exec command="/bin/bash" workingdir="oxbot">
                 <arg>-xc</arg>
-                <arg>oxbot -i Account -v account_type:publisher oxtest_aq/components/OX3API/tests</arg>
+                <arg>oxbot -i Account -v account_type:publisher oxtest-aq/components/OX3API/tests</arg>
               </exec>
             </tasks>
             <resources>
@@ -3593,7 +3593,7 @@ spec:
             <tasks>
               <exec command="/bin/bash" workingdir="oxbot">
                 <arg>-xc</arg>
-                <arg>oxbot -i Account -v account_type:site oxtest_aq/components/OX3API/tests</arg>
+                <arg>oxbot -i Account -v account_type:site oxtest-aq/components/OX3API/tests</arg>
               </exec>
             </tasks>
             <resources>
@@ -3608,7 +3608,7 @@ spec:
             <tasks>
               <exec command="/bin/bash" workingdir="oxbot">
                 <arg>-xc</arg>
-                <arg>oxbot -i Optimization -v account_type:optimization oxtest_aq/components/OX3API/tests</arg>
+                <arg>oxbot -i Optimization -v account_type:optimization oxtest-aq/components/OX3API/tests</arg>
               </exec>
             </tasks>
             <resources>
@@ -3623,7 +3623,7 @@ spec:
             <tasks>
               <exec command="/bin/bash" workingdir="oxbot">
                 <arg>-xc</arg>
-                <arg>oxbot -i MarketMappings oxtest_aq/components/OX3API/tests</arg>
+                <arg>oxbot -i MarketMappings oxtest-aq/components/OX3API/tests</arg>
                 <runif status="passed" />
               </exec>
             </tasks>
@@ -3742,7 +3742,7 @@ spec:
             <ignore pattern="**,**/*" />
           </filter>
         </git>
-        <git url="git@github-proxy.master.openx.org:openx/oxtest-video.git" shallowClone="true" dest="oxtest_video" autoUpdate="false">
+        <git url="git@github-proxy.master.openx.org:openx/oxtest-video.git" shallowClone="true" dest="oxtest-video" autoUpdate="false">
           <filter>
             <ignore pattern="**,**/*" />
           </filter>
